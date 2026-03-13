@@ -39,14 +39,20 @@ app.get('/callback', async (req, res) => {
       body: JSON.stringify({ client_id: CLIENT_ID, client_secret: CLIENT_SECRET, code }),
     });
     const data = await response.json();
+    const token = data.access_token;
 
-    // Post token back to the CMS window and close
+    // Post token back to the CMS window in the format Decap CMS expects
     res.send(`<!DOCTYPE html><html><body><script>
-      (window.opener || window.parent).postMessage(
-        'authorization:github:success:${JSON.stringify(data)}',
-        '*'
-      );
-      window.close();
+      (function() {
+        function receiveMessage(e) {
+          window.opener.postMessage(
+            'authorization:github:success:{"token":"${token}","provider":"github"}',
+            e.origin
+          );
+        }
+        window.addEventListener("message", receiveMessage, false);
+        window.opener.postMessage("authorizing:github", "*");
+      })();
     </script></body></html>`);
   } catch (err) {
     res.status(500).send('OAuth error: ' + err.message);
