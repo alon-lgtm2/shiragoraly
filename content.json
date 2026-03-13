@@ -40,37 +40,61 @@
         "num": "01",
         "title": "NBS Strategy & Methodology",
         "description": "Building 0-to-1 frameworks for nature-based solutions — from problem definition and methodology design to KPI structures and governance mechanisms.",
-        "tags": ["Urban Forestry", "Green-Blue Infra", "Biodiversity"]
+        "tags": [
+          "Urban Forestry",
+          "Green-Blue Infra",
+          "Biodiversity"
+        ]
       },
       {
         "num": "02",
         "title": "Climate Adaptation Planning",
         "description": "Developing adaptation action plans integrating flood mitigation, urban heat reduction, coastal resilience, and energy transition into statutory processes.",
-        "tags": ["Flood Risk", "Heat Mitigation", "Coastal"]
+        "tags": [
+          "Flood Risk",
+          "Heat Mitigation",
+          "Coastal"
+        ]
       },
       {
         "num": "03",
         "title": "Spatial Data & Decision Support",
         "description": "Defining what to measure and why — structuring GIS-based workflows and decision-support frameworks that translate data into actionable measures.",
-        "tags": ["GIS", "SDSS", "Scenario Analysis"]
+        "tags": [
+          "GIS",
+          "SDSS",
+          "Scenario Analysis"
+        ]
       },
       {
         "num": "04",
         "title": "Stakeholder Governance",
         "description": "Leading cross-functional processes across municipal departments, ministries, consultants, academia, and international networks from vision to execution.",
-        "tags": ["Cross-Sector", "Public-Private", "International"]
+        "tags": [
+          "Cross-Sector",
+          "Public-Private",
+          "International"
+        ]
       },
       {
         "num": "05",
         "title": "Urban Planning & Regeneration",
         "description": "Strategic planning for high-density mixed-use development, urban renewal, and sustainable building policy within statutory master plans.",
-        "tags": ["Master Planning", "Green Building", "Renewal"]
+        "tags": [
+          "Master Planning",
+          "Green Building",
+          "Renewal"
+        ]
       },
       {
         "num": "06",
         "title": "International Advisory",
         "description": "Bringing global best practices to local implementation through C40 and ICLEI networks, translating EU frameworks into concrete municipal action.",
-        "tags": ["C40 / ICLEI", "EU Frameworks", "Policy Transfer"]
+        "tags": [
+          "C40 / ICLEI",
+          "EU Frameworks",
+          "Policy Transfer"
+        ]
       }
     ]
   },
@@ -80,10 +104,22 @@
     "title": "Building a City's Green Resilience from Zero",
     "description": "Established a new municipal department from the ground up — building the team, methodology, and governance framework for integrating climate resilience and nature-based solutions into metropolitan spatial policy.",
     "metrics": [
-      {"number": "5,000", "label": "Trees planted\nannually"},
-      {"number": "~10", "label": "Projects in 3-year\naction plan"},
-      {"number": "5+", "label": "Cross-departmental\npartners aligned"},
-      {"number": "3 mo.", "label": "Rapid pilot\nturnaround"}
+      {
+        "number": "5,000",
+        "label": "Trees planted\nannually"
+      },
+      {
+        "number": "~10",
+        "label": "Projects in 3-year\naction plan"
+      },
+      {
+        "number": "5+",
+        "label": "Cross-departmental\npartners aligned"
+      },
+      {
+        "number": "3 mo.",
+        "label": "Rapid pilot\nturnaround"
+      }
     ],
     "phases": [
       {
@@ -105,13 +141,6 @@
   },
   "contact": {
     "heading": "Let's build resilient cities together",
-    "subtitle": "Whether you're a municipality, consultancy, or tech firm navigating climate adaptation — I'd love to explore collaboration.",
-    "email": "shira.goraly@gmail.com",
-    "phone": "+31 6 1889 3277",
-    "phone_raw": "+31618893277",
-    "linkedin_url": "https://www.linkedin.com/in/shiragoraly",
-    "linkedin_label": "LinkedIn Profile",
-    "location": "Leiden Area, The Netherlands",
     "cards": [
       {
         "title": "For Employers & Recruiters",
@@ -125,9 +154,16 @@
         "title": "For Speaking & Workshops",
         "text": "Experienced speaker at C40 and ICLEI forums. Available for keynotes, panels, and stakeholder workshop facilitation."
       }
-    ]
+    ],
+    "phone": "+31 6 1889 3277",
+    "linkedin_url": "https://www.linkedin.com/in/shiragoraly",
+    "linkedin_label": "LinkedIn Profile",
+    "location": "Leiden Area, The Netherlands",
+    "phone_raw": "+31618893277",
+    "subtitle": "Whether you're a municipality, consultancy, or tech firm navigating climate adaptation — I'd love to explore collaboration.",
+    "email": "shira.goraly@gmail.com"
   },
   "footer": {
-    "copyright": "2025 Shira Goraly Hochberg"
+    "copyright": "2026 Shira Goraly Hochberg"
   }
 }
