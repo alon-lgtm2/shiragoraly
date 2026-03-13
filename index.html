@@ -442,5 +442,105 @@
             a.addEventListener('click', function(e) { e.preventDefault(); const t = document.querySelector(this.getAttribute('href')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
         });
     </script>
+    <script>
+    // CMS content loader — fetches content.json and updates the page
+    (function () {
+      function md(s) {
+        return s ? s.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\*(.*?)\*/g, '<em>$1</em>') : '';
+      }
+      function set(sel, val) {
+        var el = document.querySelector(sel);
+        if (el) el.textContent = val;
+      }
+      function html(sel, val) {
+        var el = document.querySelector(sel);
+        if (el) el.innerHTML = val;
+      }
+
+      fetch('/content.json?v=' + Date.now())
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(function (c) {
+          // Hero
+          set('.hero-eyebrow', c.hero.eyebrow);
+          html('.hero-title', c.hero.title_line1 + '<br>' + c.hero.title_line2 + '<br><em>' + c.hero.title_em + '</em><br>' + c.hero.title_line3);
+          set('.hero-sub', c.hero.subtitle);
+
+          // Marquee — duplicate items for seamless scroll
+          var track = document.querySelector('.marquee-track');
+          if (track && c.marquee_items) {
+            var items = c.marquee_items.concat(c.marquee_items);
+            track.innerHTML = items.map(function (i) {
+              return '<span class="marquee-item"><span class="m-dot"></span>' + i + '</span>';
+            }).join('');
+          }
+
+          // About
+          html('.about-h', c.about.heading_plain + '<em>' + c.about.heading_em + '</em>');
+          var tags = document.querySelector('.about-tags');
+          if (tags) tags.innerHTML = c.about.credentials.map(function (t) { return '<span class="a-tag">' + t + '</span>'; }).join('');
+          var bio = document.querySelector('.about-body');
+          if (bio) {
+            bio.innerHTML =
+              '<p>' + md(c.about.bio_para1) + '</p>' +
+              '<p>' + md(c.about.bio_para2) + '</p>' +
+              '<p>' + md(c.about.bio_para3) + '</p>' +
+              '<div class="about-quote"><p>' + c.about.quote + '</p></div>';
+          }
+
+          // Expertise
+          set('.exp-header h2', c.expertise.heading);
+          set('.exp-header > p', c.expertise.subtitle);
+          var grid = document.querySelector('.exp-grid');
+          if (grid) {
+            grid.innerHTML = c.expertise.cards.map(function (card) {
+              return '<div class="exp-card reveal">' +
+                '<div class="exp-num">' + card.num + '</div>' +
+                '<h3>' + card.title + '</h3>' +
+                '<p>' + card.description + '</p>' +
+                '<div class="exp-tags">' + card.tags.map(function (t) { return '<span class="e-tag">' + t + '</span>'; }).join('') + '</div>' +
+                '</div>';
+            }).join('');
+            document.querySelectorAll('.exp-grid .reveal').forEach(function (el) { obs.observe(el); });
+          }
+
+          // Impact
+          var caseTop = document.querySelector('.case-top .lbl');
+          if (caseTop) caseTop.textContent = c.impact.label;
+          set('.case-year', c.impact.period);
+          set('.case-text h2', c.impact.title);
+          set('.case-text p', c.impact.description);
+          var nums = document.querySelector('.case-nums');
+          if (nums) nums.innerHTML = c.impact.metrics.map(function (m) {
+            return '<div class="c-metric"><div class="c-metric-n">' + m.number + '</div><div class="c-metric-l">' + m.label.replace('\n', '<br>') + '</div></div>';
+          }).join('');
+          var phases = document.querySelector('.case-phases');
+          if (phases) {
+            phases.innerHTML = c.impact.phases.map(function (p) {
+              return '<div class="c-phase"><div class="ph-lbl">' + p.label + '</div><h4>' + p.title + '</h4><p>' + p.text + '</p></div>';
+            }).join('');
+          }
+
+          // Contact
+          set('.contact-head h2', c.contact.heading);
+          set('.contact-head > p', c.contact.subtitle);
+          var emailA = document.querySelector('.c-links a[href^="mailto"]');
+          if (emailA) { emailA.href = 'mailto:' + c.contact.email; emailA.lastChild.textContent = c.contact.email; }
+          var telA = document.querySelector('.c-links a[href^="tel"]');
+          if (telA) { telA.href = 'tel:' + c.contact.phone_raw; telA.lastChild.textContent = c.contact.phone; }
+          var liA = document.querySelector('.c-links a[href*="linkedin"]');
+          if (liA) { liA.href = c.contact.linkedin_url; liA.lastChild.textContent = c.contact.linkedin_label; }
+          var locEl = document.querySelector('.c-links .c-link:last-child');
+          if (locEl) locEl.lastChild.textContent = c.contact.location;
+          var cards = document.querySelector('.c-cards');
+          if (cards) cards.innerHTML = c.contact.cards.map(function (card) {
+            return '<div class="cc"><h4>' + card.title + '</h4><p>' + card.text + '</p></div>';
+          }).join('');
+
+          // Footer
+          html('footer p', '&copy; ' + c.footer.copyright);
+        })
+        .catch(function () { /* silently use hardcoded HTML as fallback */ });
+    })();
+    </script>
 </body>
 </html>

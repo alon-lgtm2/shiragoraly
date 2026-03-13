@@ -1,0 +1,108 @@
+backend:
+  name: github
+  repo: alon-lgtm2/shiragoraly
+  branch: master
+  base_url: https://shiragoraly-oauth.onrender.com
+
+media_folder: "."
+public_folder: "."
+
+collections:
+  - name: "site"
+    label: "Site Content"
+    files:
+
+      - name: "hero"
+        label: "Hero"
+        file: "content.json"
+        format: json
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Eyebrow tagline", name: "eyebrow", widget: "string"}
+              - {label: "Title line 1", name: "title_line1", widget: "string"}
+              - {label: "Title line 2", name: "title_line2", widget: "string"}
+              - {label: "Title italic word", name: "title_em", widget: "string"}
+              - {label: "Title line 3", name: "title_line3", widget: "string"}
+              - {label: "Subtitle paragraph", name: "subtitle", widget: "text"}
+          - label: "Marquee keywords"
+            name: "marquee_items"
+            widget: "list"
+            field: {label: "Keyword", name: "item", widget: "string"}
+          - label: "About"
+            name: "about"
+            widget: "object"
+            fields:
+              - {label: "Heading (plain part)", name: "heading_plain", widget: "string"}
+              - {label: "Heading (italic part)", name: "heading_em", widget: "string"}
+              - label: "Credentials / tags"
+                name: "credentials"
+                widget: "list"
+                field: {label: "Credential", name: "item", widget: "string"}
+              - {label: "Bio paragraph 1 (use **bold** for emphasis)", name: "bio_para1", widget: "text"}
+              - {label: "Bio paragraph 2 (use **bold** for emphasis)", name: "bio_para2", widget: "text"}
+              - {label: "Bio paragraph 3 (use **bold** for emphasis)", name: "bio_para3", widget: "text"}
+              - {label: "Pull quote", name: "quote", widget: "text"}
+          - label: "Expertise"
+            name: "expertise"
+            widget: "object"
+            fields:
+              - {label: "Section heading", name: "heading", widget: "string"}
+              - {label: "Section subtitle", name: "subtitle", widget: "text"}
+              - label: "Cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - {label: "Number (e.g. 01)", name: "num", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+                  - label: "Tags"
+                    name: "tags"
+                    widget: "list"
+                    field: {label: "Tag", name: "item", widget: "string"}
+          - label: "Impact"
+            name: "impact"
+            widget: "object"
+            fields:
+              - {label: "Section label", name: "label", widget: "string"}
+              - {label: "Period (e.g. Haifa Municipality · 2020–2025)", name: "period", widget: "string"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - label: "Metrics"
+                name: "metrics"
+                widget: "list"
+                fields:
+                  - {label: "Number (e.g. 5,000)", name: "number", widget: "string"}
+                  - {label: "Label (use \\n for line break)", name: "label", widget: "string"}
+              - label: "Phases"
+                name: "phases"
+                widget: "list"
+                fields:
+                  - {label: "Label (e.g. Challenge)", name: "label", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Text", name: "text", widget: "text"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+              - {label: "Heading", name: "heading", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "text"}
+              - {label: "Email address", name: "email", widget: "string"}
+              - {label: "Phone (display format)", name: "phone", widget: "string"}
+              - {label: "Phone (raw, digits only for tel: link)", name: "phone_raw", widget: "string"}
+              - {label: "LinkedIn URL", name: "linkedin_url", widget: "string"}
+              - {label: "LinkedIn label", name: "linkedin_label", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - label: "Contact cards"
+                name: "cards"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Text", name: "text", widget: "text"}
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - {label: "Copyright text (without ©)", name: "copyright", widget: "string"}

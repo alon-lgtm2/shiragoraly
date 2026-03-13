@@ -1,0 +1,133 @@
+{
+  "hero": {
+    "eyebrow": "Urban Resilience & NBS Strategist",
+    "title_line1": "Translating climate",
+    "title_line2": "complexity into",
+    "title_em": "implementable",
+    "title_line3": "urban strategy",
+    "subtitle": "Two decades of building the methodologies, governance frameworks, and KPI systems that turn nature-based solutions from concept into city-wide reality."
+  },
+  "marquee_items": [
+    "Nature-Based Solutions",
+    "Climate Adaptation",
+    "Urban Forestry",
+    "Spatial Data Strategy",
+    "Stakeholder Governance",
+    "GIS & Decision Support",
+    "Green-Blue Infrastructure",
+    "C40 & ICLEI Networks"
+  ],
+  "about": {
+    "heading_plain": "Where governance meets ",
+    "heading_em": "nature-based innovation",
+    "credentials": [
+      "M.Sc. Urban Management — Erasmus",
+      "B.Arch (Honors) — Technion",
+      "NBI Academy 2025",
+      "ESG Certified",
+      "C40 & ICLEI"
+    ],
+    "bio_para1": "I'm a **spatial planning and climate adaptation professional** who has spent two decades translating complex urban challenges into implementable strategies for cities. My work sits at the intersection of environmental policy, data-driven decision-making, and cross-stakeholder governance.",
+    "bio_para2": "As former **Head of Environmental & Sustainable Planning** at Haifa Municipality, I established a new department from the ground up, led the city's first Climate Adaptation Action Plan, and introduced GIS-based workflows for climate risk mapping and spatial prioritization.",
+    "bio_para3": "Now based in **the Netherlands**, I bring a unique blend: the strategic vision to define what needs measuring and why, the governance fluency to navigate public sector procurement, and the implementation drive to push strategies from paper to the ground.",
+    "quote": "I don't just write plans — I build the methodology, define the KPIs, align the stakeholders, and drive implementation."
+  },
+  "expertise": {
+    "heading": "How I Create Value",
+    "subtitle": "Strategic advisory at the nexus of urban nature, climate data, and governance — bridging innovation with implementation.",
+    "cards": [
+      {
+        "num": "01",
+        "title": "NBS Strategy & Methodology",
+        "description": "Building 0-to-1 frameworks for nature-based solutions — from problem definition and methodology design to KPI structures and governance mechanisms.",
+        "tags": ["Urban Forestry", "Green-Blue Infra", "Biodiversity"]
+      },
+      {
+        "num": "02",
+        "title": "Climate Adaptation Planning",
+        "description": "Developing adaptation action plans integrating flood mitigation, urban heat reduction, coastal resilience, and energy transition into statutory processes.",
+        "tags": ["Flood Risk", "Heat Mitigation", "Coastal"]
+      },
+      {
+        "num": "03",
+        "title": "Spatial Data & Decision Support",
+        "description": "Defining what to measure and why — structuring GIS-based workflows and decision-support frameworks that translate data into actionable measures.",
+        "tags": ["GIS", "SDSS", "Scenario Analysis"]
+      },
+      {
+        "num": "04",
+        "title": "Stakeholder Governance",
+        "description": "Leading cross-functional processes across municipal departments, ministries, consultants, academia, and international networks from vision to execution.",
+        "tags": ["Cross-Sector", "Public-Private", "International"]
+      },
+      {
+        "num": "05",
+        "title": "Urban Planning & Regeneration",
+        "description": "Strategic planning for high-density mixed-use development, urban renewal, and sustainable building policy within statutory master plans.",
+        "tags": ["Master Planning", "Green Building", "Renewal"]
+      },
+      {
+        "num": "06",
+        "title": "International Advisory",
+        "description": "Bringing global best practices to local implementation through C40 and ICLEI networks, translating EU frameworks into concrete municipal action.",
+        "tags": ["C40 / ICLEI", "EU Frameworks", "Policy Transfer"]
+      }
+    ]
+  },
+  "impact": {
+    "label": "Featured Impact",
+    "period": "Haifa Municipality · 2020–2025",
+    "title": "Building a City's Green Resilience from Zero",
+    "description": "Established a new municipal department from the ground up — building the team, methodology, and governance framework for integrating climate resilience and nature-based solutions into metropolitan spatial policy.",
+    "metrics": [
+      {"number": "5,000", "label": "Trees planted\nannually"},
+      {"number": "~10", "label": "Projects in 3-year\naction plan"},
+      {"number": "5+", "label": "Cross-departmental\npartners aligned"},
+      {"number": "3 mo.", "label": "Rapid pilot\nturnaround"}
+    ],
+    "phases": [
+      {
+        "label": "Challenge",
+        "title": "No Existing Framework",
+        "text": "The city had no dedicated environmental planning capacity — no methodology, no KPIs, no cross-departmental governance for climate adaptation."
+      },
+      {
+        "label": "Approach",
+        "title": "0→1 Methodology & Governance",
+        "text": "Designed the methodology, assembled a multidisciplinary team, defined KPIs and monitoring, coordinated 5+ partners on a city-wide action plan."
+      },
+      {
+        "label": "Outcome",
+        "title": "Measurable Transformation",
+        "text": "Delivered the city's first Climate Adaptation Action Plan, Urban Nature Strategy, and Forestry Master Plan with annual monitoring and multi-million budget pipeline."
+      }
+    ]
+  },
+  "contact": {
+    "heading": "Let's build resilient cities together",
+    "subtitle": "Whether you're a municipality, consultancy, or tech firm navigating climate adaptation — I'd love to explore collaboration.",
+    "email": "shira.goraly@gmail.com",
+    "phone": "+31 6 1889 3277",
+    "phone_raw": "+31618893277",
+    "linkedin_url": "https://www.linkedin.com/in/shiragoraly",
+    "linkedin_label": "LinkedIn Profile",
+    "location": "Leiden Area, The Netherlands",
+    "cards": [
+      {
+        "title": "For Employers & Recruiters",
+        "text": "Seeking a Principal IC / Lead Strategist role in the Dutch climate adaptation and NBS ecosystem — defining methodologies, leading client engagement, driving real-world impact."
+      },
+      {
+        "title": "For Consulting Opportunities",
+        "text": "Available for strategic advisory on urban resilience, NBS program design, climate adaptation frameworks, and stakeholder governance across Europe."
+      },
+      {
+        "title": "For Speaking & Workshops",
+        "text": "Experienced speaker at C40 and ICLEI forums. Available for keynotes, panels, and stakeholder workshop facilitation."
+      }
+    ]
+  },
+  "footer": {
+    "copyright": "2025 Shira Goraly Hochberg"
+  }
+}
