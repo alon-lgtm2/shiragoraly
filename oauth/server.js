@@ -5,10 +5,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const CLIENT_ID = process.env.OAUTH_CLIENT_ID;
 const CLIENT_SECRET = process.env.OAUTH_CLIENT_SECRET;
-const SITE_ORIGIN = process.env.SITE_ORIGIN || 'https://shiragoraly.onrender.com';
+const SITE_ORIGIN = process.env.SITE_ORIGIN || 'https://shiragoraly-production.onrender.com';
+const ALLOWED_ORIGINS = [SITE_ORIGIN, 'https://shiragoraly.onrender.com'];
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', SITE_ORIGIN);
+  const origin = req.headers.origin;
+  if (ALLOWED_ORIGINS.includes(origin)) res.setHeader('Access-Control-Allow-Origin', origin);
   res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
   if (req.method === 'OPTIONS') return res.sendStatus(200);
@@ -20,7 +22,7 @@ app.get('/auth', (req, res) => {
   const params = new URLSearchParams({
     client_id: CLIENT_ID,
     scope: 'repo',
-    redirect_uri: `${req.protocol}://${req.get('host')}/callback`,
+    redirect_uri: `https://${req.get('host')}/callback`,
   });
   res.redirect(`https://github.com/login/oauth/authorize?${params}`);
 });
@@ -42,7 +44,7 @@ app.get('/callback', async (req, res) => {
     res.send(`<!DOCTYPE html><html><body><script>
       (window.opener || window.parent).postMessage(
         'authorization:github:success:${JSON.stringify(data)}',
-        '${SITE_ORIGIN}'
+        '*'
       );
       window.close();
     </script></body></html>`);
